@@ -2,7 +2,7 @@ name: My_first_action
 on: push
 jobs:
    first_job:
-      runs_on: ubuntu-latest
+      runs-on: ubuntu-latest
       steps:
       - name: checkout repo
         uses: actions/checkout@v4

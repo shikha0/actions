@@ -10,3 +10,5 @@ jobs:
         run: |
            echo "hello"
            ls -ltrh
+      - name: use shell script
+        run: ./shell-example.sh

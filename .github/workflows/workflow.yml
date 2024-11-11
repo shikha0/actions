@@ -11,4 +11,6 @@ jobs:
            echo "hello"
            ls -ltrh
       - name: use shell script
-        run: ./shell-example.sh
+        run: |
+           chmod +x shee-example.sh
+           ./shell-example.sh

@@ -12,5 +12,5 @@ jobs:
            ls -ltrh
       - name: use shell script
         run: |
-           chmod +x shee-example.sh
+           chmod +x shell-example.sh
            ./shell-example.sh

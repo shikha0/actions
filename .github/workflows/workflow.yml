@@ -14,3 +14,8 @@ jobs:
         run: |
            chmod +x shell-example.sh
            ./shell-example.sh
+   second_job:
+      runs-on: ubuntu-latest
+      steps:
+      - name: second stage
+        run: echo "hello I am the second job"

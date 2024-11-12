@@ -16,6 +16,7 @@ jobs:
            ./shell-example.sh
    second_job:
       runs-on: ubuntu-latest
+      needs: first_job
       steps:
       - name: second stage
         run: echo "hello I am the second job"

@@ -13,7 +13,7 @@ jobs:
            touch stage.txt
            echo "hello" > stage.txt
       - name: upload
-      - uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
            name: upload1
            path: stage.txt
@@ -26,7 +26,7 @@ jobs:
       needs: first_job
       steps:
       - name: download1
-      - uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4
         with:
            name: upload1
       - name: second stage

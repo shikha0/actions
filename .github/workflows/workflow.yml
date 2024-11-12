@@ -1,5 +1,5 @@
 name: My_first_action
-on: push
+on: workflow_dispatch
 
 env:
    usevar: test

@@ -29,7 +29,7 @@ jobs:
       needs: first_job
       concurrency:
           cancel-in-progress: false
-      
+          group: prod
       steps:
       - name: download1
         uses: actions/download-artifact@v4

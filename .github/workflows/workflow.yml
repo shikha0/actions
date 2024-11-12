@@ -13,7 +13,7 @@ jobs:
            echo "hello"
            ls -ltrh
            touch stage.txt
-           echo "${{ env.usevar }}" > stage.txt
+           echo "${{ secrets.SECRET_NAME }}" > stage.txt
       - name: upload
         uses: actions/upload-artifact@v4
         with:
@@ -34,4 +34,5 @@ jobs:
       - name: second stage
         run: |
            echo "hello I am the second job"
+           echo "${{ env.VAR }}
            cat stage.txt

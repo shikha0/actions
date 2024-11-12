@@ -1,5 +1,7 @@
 name: My_first_action
 on: push
+env:
+   usevar: test
 jobs:
    first_job:
       runs-on: ubuntu-latest
@@ -11,7 +13,7 @@ jobs:
            echo "hello"
            ls -ltrh
            touch stage.txt
-           echo "hello" > stage.txt
+           echo "{{ env.usevar }}" > stage.txt
       - name: upload
         uses: actions/upload-artifact@v4
         with:

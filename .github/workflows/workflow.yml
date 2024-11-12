@@ -34,5 +34,5 @@ jobs:
       - name: second stage
         run: |
            echo "hello I am the second job"
-           echo "${{ env.VAR }}
+           echo "${{ env.VAR }}"
            cat stage.txt

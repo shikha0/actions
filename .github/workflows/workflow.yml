@@ -1,5 +1,12 @@
 name: My_first_action
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      test-type:
+         description: test
+         type: boolean
+         required: true
+    
 
 env:
    usevar: test
@@ -15,6 +22,7 @@ jobs:
            ls -ltrh
            touch stage.txt
            echo "${{ secrets.SECRET_NAME }}" > stage.txt
+           echo "${{ inputs.test-type }}"
       - name: upload
         uses: actions/upload-artifact@v4
         with:
